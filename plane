@@ -1,0 +1,33 @@
+Plan build web page.
+ The .main-section elements should contain at least ten p elements total (not each)
+ The .main-section elements should contain at least five code elements total (not each)
+ The .main-section elements should contain at least five li items total (not each)
+ The project must have at least one media query.
+ ---------------------------------
+body {
+    main id=main-doc {
+        nav id(navbar){
+            header{HTML and CSS}
+            a class(nav-link) src=main-section(they five){The text must contain appropriate headings for each section. And provide clickable navigation.}
+        }
+        1section class(mai-section) id(What's_is_HTML?){
+            header {What's is HTML?}
+            p {Description}
+        }
+        2section class(mai-section) id(Basic_elements_HTML){
+            header {Basic elements HTML}
+            p {Description}
+        }
+        3section class(mai-section) id(What's_is_CSS?){
+            header {What's is CSS?}
+            p {Description}
+        }
+        4section class(mai-section) id(Basic_elements_CSS){
+            header {Basic CSS Rules}
+            p {Description}
+        }
+        5section class(mai-section) id(Possible_options_for_connecting_CSS){
+            header {Possible options for connecting CSS}
+            p {Description}
+            }
+        }

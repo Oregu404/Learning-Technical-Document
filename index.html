@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Technical Document</title>
+</head>
+<body >
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>HTML and CSS</header>
+            <a class="nav-link" href="#What's_is_HTML">What's is HTML</a>
+            <a class="nav-link" href="#Basic_element_HTML">Basic element HTML</a>
+            <a class="nav-link" href="#What's_is_CSS">What's is CSS</a>
+            <a class="nav-link" href="#Basic_CSS_Rules">Basic CSS Rules</a>
+            <a class="nav-link" href="#Possible_options_for_connecting_CSS">Possible options for connecting CSS</a>
+            <a class="nav-up" href="#main-doc"></a>
+        </nav>
+        <section class="main-section" id="What's_is_HTML">
+            <header>What's is HTML</header>
+            <div class="dividing-line"></div>
+            <p>HTML is a hypertext markup language. It is used to place elements on a web page: text, images, tables, and video.</p>
+            <p>Before displaying a page, the browser reads the HTML document and passes each element in the stream, in the order in which it appears. CSS can change their location regardless of their ordinal location in the document and move them to any point in the viewing area.</p>
+            <p>As already mentioned, HTML consists of elements. There are two types of elements: single (not closing tag) and with a closing tag. Let's consider the option with a closing tag. In the example below, the element has an opening tag &lt;p&gt; and a closing tag &lt;/p&gt;. Remember, you always need to close elements with a closing tag.</p>
+            <code>&lt;p&gt; opening tag and a closing tag &lt;/p&gt;</code>
+            <p>As you may have noticed in the example below, single elements do not have closing tags. You may also notice that the element contains two attributes. The first &lt;src&gt; source is needed to display the image by specifying its full path (absolute) or relative. The second &lt;alt&gt;is an alternative image in the form of text in case the image was not loaded or there was a failure, as well as for the screen reader.</p>
+            <code>&lt;img src="URL" alt="description image" &gt;</code>
+        </section>
+        <section class="main-section" id="Basic_element_HTML">
+            <header>Basic element HTML</header>
+            <div class="dividing-line"></div>
+            <p>Every HTML document starts with a basic structure of elements. Here is an example of a basic HTML document:</p>
+            <pre>
+            <code>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title>Document&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                            
+                    &lt;/body&gt;
+                    &lt;/html&gt;    
+            </code>
+            </pre>
+            <p>The &lt;!DOCTYPE html&gt; declares the version of html, currently it is the fifth version. The &lt;html lang="en"&gt; element is the root element in a document that contains all other elements. It can also contain an attribute such as lang="language" to indicate the language of the page.</p>
+            <p>Attributes in HTML are additional properties that are added to tags (elements) to change their behavior, appearance, or provide additional information. Attributes are always specified inside the opening tag and consist of a name and value separated by an equal sign (=). The attribute value is usually enclosed in quotation marks (single ' ' or double " "). There are also attributes that have no value, for example, "disabled".</p>
+            <ul id="list-basic-html">
+                <h3>List of Basic HTML Elements.</h3>
+                <li>
+                    <dl>
+                        <dt>Basic elements of document structure</dt>
+                        <dd>
+                            &lt;!DOCTYPE html&gt; - Defines the document type and HTML version (in this case HTML5).
+                        </dd>
+                        <dd>
+                            &lt;html&gt; - The root element that contains all the content of the page.
+                        </dd>
+                        <dd>
+                            &lt;head&gt; - Contains document metadata such as the title, style references, and scripts.
+                        </dd>
+                        <dd>
+                            &lt;title&gt; - The title of the page that appears in the browser tab.
+                        </dd>
+                        <dd>
+                            &lt;body&gt; - Contains the main content of the page that is displayed in the browser.
+                        </dd>
+                    </dl> 
+                </li>
+                <li>
+                    <dt>Elements for text</dt>
+                        <dd>
+                            &lt;h1&gt; - &lt;h6&gt; - Headings of different levels. &lt;h1&gt; is the most important, &lt;h6&gt; is the least important.
+                        </dd>
+                        <dd>
+                            &lt;p&gt; - Paragraph of text.
+                        </dd>
+                        <dd>
+                            &lt;span&gt; - An inline element for highlighting a section of text (often used for styling).
+                        </dd>
+                        <dd>
+                            &lt;br&gt; - Line break.
+                        </dd>
+                        <dd>
+                            &lt;hr&gt; - Horizontal line to separate content.
+                        </dd>
+                        <dd>
+                            &lt;strong&gt; - Marks text as important (usually bold).
+                        </dd>
+                        <dd>
+                            &lt;em&gt; - Marks text as emphasized (usually italic).
+                        </dd>
+                        <dd>
+                            &lt;blockquote&gt; - A quotation or block of text that is highlighted as a quotation.
+                        </dd>
+                        <dd>
+                            &lt;pre&gt; - Preserves text formatting, including spaces and line breaks.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Elements for list</dt>
+                        <dd>&lt;ul&gt; - Unordered list (bulleted).</dd>
+                        <dd>&lt;ol&gt; - Ordered list (numbered).</dd>
+                        <dd>&lt;li&gt; - List element (used inside &lt;ul&gt; or &lt;ol&gt;).</dd>
+                        <dd>&lt;dl&gt; - List of definitions.</dd>
+                        <dd>&lt;dt&gt; - A term in a definition list.</dd>
+                        <dd>&lt;dd&gt; - Definition of a term in a definition list.</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Elements for links and images</dt>
+                        <dd>&lt;a&gt; - Link. Used with the href attribute to indicate an address.</dd>
+                        <dd>&lt;img&gt; - Image. Used with the src (path to image) and alt (alternate text) attributes.</dd>
+                        <dd>&lt;figure&gt; - Container for images, diagrams, illustrations.</dd>
+                        <dd>&lt;figcaption&gt; - Caption for content inside &lt;figure&gt;.</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dt>Elements for tables</dt>
+                        <dd>
+                            &lt;table&gt; - Container for table.
+                        </dd>
+                        <dd>
+                            &lt;thead&gt; - Table title.
+                        </dd>
+                        <dd>
+                            &lt;tbody&gt; - The main content of the table.
+                        </dd>
+                        <dd>
+                            &lt;tfoot&gt; - The bottom part of the table (for example, totals).
+                        </dd>
+                        <dd>
+                            &lt;tr&gt; - Table row.
+                        </dd>
+                        <dd>
+                            &lt;th&gt; - Column or row heading.
+                        </dd>
+                        <dd>
+                            &lt;td&gt; - Table cell.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dt>Elements for tables</dt>
+                        <dd>
+                            &lt;form&gt; - Container for form elements.
+                        </dd>
+                        <dd>
+                            &lt;input&gt; - Input field. Can be a text field, button, checkbox, etc. (depending on the type attribute).
+                        </dd>
+                        <dd>
+                            &lt;textarea&gt; - Multi-line input field.
+                        </dd>
+                        <dd>
+                            &lt;button&gt; - Button.
+                        </dd>
+                        <dd>
+                            &lt;label&gt; - Caption for the form element.
+                        </dd>
+                        <dd>
+                            &lt;select&gt; - Drop-down list.
+                        </dd>
+                        <dd>
+                            &lt;option&gt; - Dropdown list element.
+                        </dd>
+                        <dd>
+                            &lt;fieldset&gt; - Groups form elements.
+                        </dd>
+                        <dd>
+                            &lt;legend&gt; - A title for a group of form elements.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Elements for multimedia</dt>
+                        <dd>&lt;audio&gt; - Embeds an audio file.</dd>
+                        <dd>&lt;video&gt; - Embeds a video file.</dd>
+                        <dd>&lt;source&gt; - Specifies the source for &lt;audio&gt; or &lt;video&gt;.</dd>
+                        <dd>&lt;iframe&gt; - Embeds external content (such as a map or YouTube video).</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Elements for structuring content</dt>
+                        <dd>&lt;header&gt; - Page or section header.</dd>
+                        <dd>&lt;footer&gt; - Footer of a page or section.</dd>
+                        <dd>&lt;main&gt; - The main content of the page.</dd>
+                        <dd>&lt;section&gt; - Section of the document.</dd>
+                        <dd>&lt;article&gt; - Independent content (eg article).</dd>
+                        <dd>&lt;aside&gt; - Sidebar or additional content.</dd>
+                        <dd>&lt;nav&gt; - Navigation menu.</dd>
+                        <dd>&lt;div&gt; - A universal container for grouping elements.</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Elements for interactivity</dt>
+                        <dd>&lt;details&gt; - Creates a drop-down block.</dd>
+                        <dd>&lt;summary&gt; - Title for &lt;details&gt;.</dd>
+                        <dd>&lt;dialog&gt; - Dialog box.</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>Elements for metadata</dt>
+                        <dd>&lt;meta&gt; - Metadata such as encoding, page description, and keywords.</dd>
+                        <dd>&lt;link&gt; - Includes external resources (e.g. CSS files).</dd>
+                        <dd>&lt;script&gt; - Enables JavaScript code.</dd>
+                        <dd>&lt;style&gt; - Embeds CSS styles./dd>
+                    </dl>
+                </li>
+        </section>
+        <section class="main-section" id="What's_is_CSS">
+            <header>What's is CSS</header>
+            <div class="dividing-line"></div>
+            <p>CSS, or Cascading Style Sheets, is a stylesheet language used to describe the presentation of a document written in HTML or XML. It controls the layout, colors, fonts, spacing, and overall visual appearance of web pages. CSS separates content (HTML) from design, making it easier to maintain and update websites. With CSS, developers can create responsive designs that adapt to different screen sizes, ensuring a consistent user experience across devices.</p>
+            <p>CSS works by applying styles to HTML elements using rules. Each rule consists of a selector and a declaration block. The selector targets the HTML element, and the declaration block contains one or more property-value pairs that define the styling.</p>
+            <pre>
+            <code>
+                &lt;html&gt; {
+                    color: red;
+                    }        
+                </code>
+            </pre>
+            <p>
+                <strong>Selector:</strong> <code>&lt;html&gt;</code> — This is the element to which styles are applied.<br>
+                <strong>Rule:</strong> <code>color</code> — This is a property that defines the color of the text.<br>
+                <strong>Value:</strong> <code>red</code> — This is the property value that specifies the color red.
+            </p>
+        </section>
+        <section class="main-section" id="Basic_CSS_Rules">
+            <header>Basic CSS Rules</header>
+            <div class="dividing-line"></div>
+            <ol>               
+                    <li>
+                        <p>CSS Syntax:</p>
+                        <ul>
+                            <li>Each CSS rule consists of a selector and a declaration block.</li>
+                            <li>A declaration block contains one or more properties and their values, separated by semicolons (;).</li>
+                            <li>Exemple: <code><pre>
+                                selector {
+                                propertie: value;
+                                }
+                            </pre></code></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Selectors:</p>
+                        <ul>
+                            <li>Selectors determine which HTML elements the styles are applied to.</li>
+                            <li><span>Basic selector types:</span>
+                                <ul class="Selector-types-list">
+                                    <li>By tag: p, h1, div.</li>
+                                    <li>By class: .my-class.</li>
+                                    <li>By ID: #my-id.</li> 
+                                    <li>Universal selector: * (applies to all elements).</li>      
+                                    <li>Combined selectors: div.my-class, h1#my-id.</li>                                                                   
+                                </ul>
+                            </li>                           
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Cascading:</p>
+                        <ul>
+                            <li><span>When multiple rules apply to the same element, the browser uses precedence:</span>
+                                <ul class="Selector-types-list">
+                                    <li>Importance (!important).</li>
+                                    <li>Specificity (selector weight).</li>
+                                    <li>Order of announcement (the last rule takes precedence).</li>                                                               
+                                </ul>
+                            </li>                           
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Inheritance:</p>
+                        <ul>
+                            <li>Some CSS properties (e.g. color, font-family) are inherited by child elements from their parents.</li>
+                            <li>Exemple: <code><pre>
+                                body {
+                                    font-family: Arial, sans-serif;
+                                  }
+                            </pre></code></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Box Model:</p>
+                        <ul>
+                            <li><span>Each element on the page is a rectangle consisting of:</span>
+                                <ul class="Selector-types-list">
+                                    <li>Content.</li>
+                                    <li>Padding.</li>
+                                    <li>Border.</li>  
+                                    <li>Margin.</li>                                                             
+                                </ul>
+                            </li>                           
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Units of measurement:</p>
+                            <ul> 
+                                    <li>Absolute: px (pixels), pt (points), cm (centimeters).</li>
+                                    <li>Relative: % (percent), em, rem (relative to font size), vh, vw (relative to browser window size).</li>                                                         
+                            </ul>                           
+                    </li>
+                    <li>
+                        <p>Color:</p>
+                        <ul>
+                            <li><span>Colors can be specified:</span>
+                                <ul class="Selector-types-list">
+                                    <li>By name: red, blue.</li>
+                                    <li>In HEX format: #ff0000.</li>
+                                    <li>In RGB/RGBA: rgb(255, 0, 0), rgba(255, 0, 0, 0.5).</li>  
+                                    <li>In HSL/HSLA: hsl(0, 100%, 50%), hsla(0, 100%, 50%, 0.5).</li>                                                             
+                                </ul>
+                            </li>                           
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Positiong:</p>
+                        <ul>
+                            <li><span>The position property determines how an element is positioned on the page:</span>
+                                <ul class="Selector-types-list">
+                                    <li>static (default).</li>
+                                    <li>relative (relative to its normal position).</li>
+                                    <li>absolute (relative to the closest positioned parent).</li>  
+                                    <li>fixed (relative to the browser window).</li>
+                                    <li>sticky (a combination of relative and fixed).</li>                                                             
+                                </ul>
+                            </li>                           
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Flexbox:</p>
+                        <ul>
+                            <li>Used to create flexible layouts.</li>
+                            <li><span>Main properties:</span>
+                                <ul class="Selector-types-list">
+                                    <li>display: flex; (enables Flexbox).</li>
+                                    <li>justify-content (align to main axis).</li>
+                                    <li>align-items (alignment along the cross axis).</li>                                                      
+                                </ul>
+                            </li>
+                            <li>Exemple: <code><pre>
+                                .container {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    }
+                            </pre></code></li>                           
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Grid:</p>
+                        <ul>
+                            <li>Used to create complex grid layouts.</li>
+                            <li><span>Main properties:</span>
+                                <ul class="Selector-types-list">
+                                    <li>display: grid; (includes Grid).</li>
+                                    <li>grid-template-columns (defines columns).</li>
+                                    <li>grid-template-rows (defines rows).</li>
+                                    <li>gap (distance between elements).</li>                                                      
+                                </ul>
+                            </li>
+                            <li>Exemple: <code><pre>
+                                .container {
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr 1fr;
+                                    gap: 10px;
+                                  }
+                            </pre></code></li>                           
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Media Queries:</p>
+                        <ul>
+                            <li>Allows you to apply styles depending on device characteristics (screen width, orientation, etc.).</li>
+                            <li>Exemple: <code><pre>
+                                @media (max-width: 600px) {
+                                    body {
+                                      font-size: 14px;
+                                    }
+                                  }
+                            </pre></code></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Animations and transitions:</p>
+                        <ul>
+                            <li>Transitions: A smooth change in properties.</li>
+                            <code><pre>
+                                button {
+                                    transition: background-color 0.3s ease;
+                                  }
+                                  button:hover {
+                                    background-color: blue;
+                                  }
+                            </pre></code>
+
+                            <li>Animations (@keyframes): Create complex animations.</li>
+                            <code><pre>
+                                @keyframes slide {
+                                    from { transform: translateX(0); }
+                                    to { transform: translateX(100px); }
+                                  }
+                                  .box {
+                                    animation: slide 2s infinite;
+                                  }
+                            </pre></code>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Pseudo-classes and pseudo-elements:</p>
+                        <ul>
+                            <li>Pseudo-classes: Allow you to style elements in a certain state.</li>
+                            <code><pre>
+                                a:hover {
+                                    color: red;
+                                  }
+                            </pre></code>
+
+                            <li>Pseudo-elements: Allow you to style specific parts of an element.</li>
+                            <code><pre>
+                                p::first-letter {
+                                    font-size: 2em;
+                                  }
+                            </pre></code>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Variables (Custom Properties):</p>
+                        <ul>
+                            <li>Allows you to create variables to reuse values.</li>
+                            <li>Exemple: <code><pre>
+                                :root {
+                                    --main-color: blue;
+                                  }
+                                  body {
+                                    background-color: var(--main-color);
+                                  }
+                            </pre></code></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Reset CSS:</p>
+                        <ul>
+                            <li>Removes default browser styles to ensure consistency.</li>
+                            <li>Exemple: <code><pre>
+                                * {
+                                    margin: 0;
+                                    padding: 0;
+                                    box-sizing: border-box;
+                                  }
+                            </pre></code></li>
+                        </ul>
+                    </li>
+            </ol>
+        </section>
+        <section class="main-section" id="Possible_options_for_connecting_CSS">
+            <header>Possible options for connecting CSS</header>
+            <div class="dividing-line"></div>
+            <h3>1. Inline CSS</h3>
+            <p>Inline CSS is applied directly to an HTML element using the style attribute. This method is useful for quick, one-off styling but is not recommended for large-scale projects.</p>
+            <div><span>Exemple: <br></span><code>&lt;p style="color: red; font-size: 16px;"&gt;This is a red paragraph.&lt;/p&gt;</code></div>
+            <dl>
+                <dt>When to use:</dt>
+                <dd>For small, specific changes.</dd>
+                <dd>When you need to override other styles temporarily.</dd>
+            </dl>
+            <dl>
+                <dt>Pros:</dt>
+                <dd>Easy to implement.</dd>
+                <dd>High specificity (overrides external and internal styles).</dd>
+            </dl>
+            <dl>
+                <dt>Cons:</dt>
+                <dd>Hard to maintain.</dd>
+                <dd>Not reusable.</dd>
+                <dd>Mixes content with presentation (violates separation of concerns).</dd>
+            </dl>
+
+            <h3>2. Internal (Embedded) CSS</h3>
+            <p>Internal CSS is defined within a &lt;style&gt; tag in the &lt;head&gt; section of an HTML document. It applies styles to the entire page.</p>
+            <div><span>Exemple: <br></span><pre><code>
+
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;style
+                        p {
+                        color: blue;
+                        font-size: 18px;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body
+                    &lt;p&gt;This is a blue paragraph.&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+
+                </code></pre></div>
+            <dl>
+                <dt>When to use:</dt>
+                <dd>For single-page websites or small projects.</dd>
+                <dd>When you don’t want to create a separate CSS file.</dd>
+            </dl>
+            <dl>
+                <dt>Pros:</dt>
+                <dd>Keeps styles in one place.</dd>
+                <dd>Easier to maintain than inline CSS.</dd>
+            </dl>
+            <dl>
+                <dt>Cons:</dt>
+                <dd>Not reusable across multiple pages.</dd>
+                <dd>Increases HTML file size.</dd>
+            </dl>
+
+            <h3>3. External CSS</h3>
+            <p>External CSS is stored in a separate .css file and linked to the HTML document using the &lt;link&gt; tag. This is the most recommended method for larger projects.</p>
+            <div><span>Exemple: <br></span><span>1. Create a base CSS file (base.css): <br></span><pre><code>
+                p {
+                    color: green;
+                    font-size: 20px;
+                    }
+                </code></pre></div>
+            <div><span>2. Import it into another CSS file (styles.css): <br></span>
+                <pre><code>
+                @import url('base.css');
+
+                p {
+                color: purple;
+                }
+                </code></pre></div>
+            <dl>
+                <dt>When to use:</dt>
+                <dd>For modularizing CSS files.</dd>
+                <dd>When you want to split styles into smaller, reusable components.</dd>
+            </dl>
+            <dl>
+                <dt>Pros:</dt>
+                <dd>Improves organization.</dd>
+                <dd>Improves organization.</dd>
+            </dl>
+            <dl>
+                <dt>Can increase load time if overused.</dt>
+                <dd>Can increase load time if overused.</dd>
+            </dl>
+        </section>
+        <footer>&copy; Savinov O.S</footer>
+    </main>
+</body>
+</html>
